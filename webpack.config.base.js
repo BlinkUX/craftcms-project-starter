@@ -28,7 +28,7 @@ const webpackBaseConfig = function (env) {
     // Where Webpack"s begins it module compilation process
     entry: {
       // File containing our custom code
-      global: "./src/javascripts/global.js",
+      main: "./src/javascripts/main.js",
 
       // File containing our custom routes
       router: "./src/javascripts/router.js",
