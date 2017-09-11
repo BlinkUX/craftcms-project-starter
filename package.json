@@ -1,0 +1,52 @@
+{
+  "name": "craftcms-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Craft CMS webpack Boilerplate npm dependencies",
+  "main": "index.js",
+  "scripts": {
+    "ds_store": "find . -name '.DS_Store' -type f -delete",
+    "clean": "npm run ds_store && rimraf public/build",
+    "start": "npm run clean && WEBPACK_CONFIG_TYPE='watch' webpack --progress --colors",
+    "build": "npm run clean && WEBPACK_CONFIG_TYPE='build' webpack -p --progress --colors",
+    "launch": "npm run clean && WEBPACK_CONFIG_TYPE='launch' webpack -p --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rppld/craftcms-webpack-boilerplate"
+  },
+  "author": "Rppld",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.27.3",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
+    "rimraf": "^2.6.1",
+    "robotstxt-webpack-plugin": "^1.0.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.1",
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^4.1.0",
+    "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lazysizes": "^4.0.0-rc3",
+    "picturefill": "^3.0.2",
+    "vue": "^2.4.2"
+  }
+}

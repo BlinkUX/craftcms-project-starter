@@ -1,0 +1,58 @@
+.sans-serif {
+  font-family: "Helvetica Neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+}
+
+.fonts-loaded .archivo-black {
+  font-family: "ArchivoBlack", sans-serif;
+}
+
+.mw-75 { max-width: 75% }
+.rotate-45 { transform: rotate(45deg); }
+.shadow-6 { box-shadow: 32px 32px 256px 0 rgba(0,0,0,.5); }
+.pointer-events-none { pointer-events: none; }
+.momentum-scroll { -webkit-overflow-scrolling: touch; }
+
+.nested-links-black-outline-white a {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.nested-links-black-outline-white a:hover,
+.nested-links-black-outline-white a:focus {
+  color: white;
+  -webkit-text-stroke-width: 0;
+}
+
+.invisible {
+  transition: 400ms;
+  transform: translate3d(0,100px,0) scale(0.9);
+  opacity: 0.0;
+}
+
+.visible {
+  transition: 400ms;
+  transform: translate3d(0,0,0) scale(1);
+  opacity: 1.0;
+}
+
+@media screen and (min-width: 30em) {
+
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+
+}
+
+@media screen and (min-width: 60em) {
+  .mh-vh-80-l { max-height: 80vh; }
+}
+
+@media screen and (min-width: 90em) {
+  .mb5-xl { margin-bottom: 4rem; }
+  .pt5-xl { padding-top: 4rem; }
+  .pa5-xl { padding: 4rem; }
+  .ph5-xl { padding-left: 4rem; padding-right: 4rem; }
+  .ph6-xl { padding-left: 8rem; padding-right: 8rem; }
+  .pa6-xl { padding: 8rem; }
+}

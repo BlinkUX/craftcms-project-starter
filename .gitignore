@@ -1,0 +1,13 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+.log
+.sass-cache/
+Thumbs.db
+node_modules
+config/license.key
+storage/runtime/
+storage/backups/
+web/uploads/*
+*.map
