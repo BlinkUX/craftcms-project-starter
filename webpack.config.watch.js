@@ -5,7 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpackDevelopmentConfig = {
   // Newly compiled file configuration
   output: {
-    filename: "javascripts/[name].bundle.js",
+    filename: "js/[name].bundle.js",
   },
 
   // Turn on watch mode. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files.
@@ -22,7 +22,7 @@ const webpackDevelopmentConfig = {
   // Plugins => Configure webpack plugins
   plugins: [
     new ExtractTextPlugin({
-      filename: "stylesheets/[name].bundle.css",
+      filename: "css/[name].bundle.css",
     }),
   ],
 }
