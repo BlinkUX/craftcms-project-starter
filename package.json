@@ -2,7 +2,7 @@
   "name": "craftcms-webpack-boilerplate",
   "version": "1.0.0",
   "description": "Craft CMS webpack Boilerplate npm dependencies",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "ds_store": "find . -name '.DS_Store' -type f -delete",
     "clean": "npm run ds_store && rimraf public/build",
