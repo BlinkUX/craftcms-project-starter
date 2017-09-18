@@ -12,6 +12,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 // const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
 
+const WebpackNotifierPlugin = require("webpack-notifier")
+
 // MAIN WEBPACK CONFIGURATION
 const webpackBaseConfig = function (env) {
   return {
@@ -133,6 +135,8 @@ const webpackBaseConfig = function (env) {
         template: "./src/templates/_layout.twig",
         filename: "../../templates/_layout.twig",
       }),
+
+      new WebpackNotifierPlugin({alwaysNotify: true}),
     ],
   }
 }
