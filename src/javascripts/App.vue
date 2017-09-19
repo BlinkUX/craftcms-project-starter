@@ -14,7 +14,7 @@
     },
     components: {
       Logo,
-    }
+    },
   }
 </script>
 

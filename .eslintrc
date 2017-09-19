@@ -3,5 +3,8 @@
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "quotes": ["error", "double"],
-  }
+  },
+  "plugins": [
+    "html"
+  ]
 }
