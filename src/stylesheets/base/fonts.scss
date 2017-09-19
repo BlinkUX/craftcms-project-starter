@@ -1,7 +1,8 @@
+// Paths are relative to location of main style.scss file
 @font-face {
   font-family: "ArchivoBlack";
-  src: url("/build/fonts/ArchivoBlack-Regular.woff2") format("woff2"),
-       url("/build/fonts/ArchivoBlack-Regular.woff") format("woff");
+  src: url("../assets/ArchivoBlack-Regular.woff2") format("woff2"),
+       url("../assets/ArchivoBlack-Regular.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
