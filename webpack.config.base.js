@@ -10,11 +10,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 // Generates an HTML5 file for you that includes all your webpack bundles in the body using script tags
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-// const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
-
 const WebpackNotifierPlugin = require("webpack-notifier")
 
-// MAIN WEBPACK CONFIGURATION
+// Main webpack configuration
 const webpackBaseConfig = function (env) {
   return {
     resolve: {
@@ -24,8 +22,8 @@ const webpackBaseConfig = function (env) {
       },
     },
 
-    // Location of the index.js file
-    // Where Webpack"s begins it module compilation process
+    // Location of the main.js file
+    // Where Webpack"s begins its module compilation process
     entry: {
       // File containing our custom code
       main: "./src/javascripts/main.js",
@@ -39,18 +37,18 @@ const webpackBaseConfig = function (env) {
 
     // Newly compiled file configuration
     output: {
-      // Save location of the newly compiled output file
+      // Output location of the newly compiled output file
       path: path.resolve(__dirname, "./web/build"),
 
       // What to call the newly compiled output file
       // [name] will be replaced with the entry objects key value.
       filename: "[name].config.base.js",
 
-      // Path webpack will reference for looking for public files. Important for dynamic codesplitting
+      // Path webpack will reference to looking for public files. Important for dynamic codesplitting
       publicPath: "/build/",
     },
 
-    // Module Rules Systems => Configuration for webpack loaders
+    // Configuration for webpack loaders
     module: {
       rules: [
         {
@@ -119,7 +117,7 @@ const webpackBaseConfig = function (env) {
     //     Modernizr: "modernizr"
     // },
 
-    // Plugins => Configure webpack plugins
+    // Configure webpack plugins
     plugins: [
       // The DefinePlugin allows you to create global constants which can be configured at compile time.
       // Note: process.env.NODE_ENV is set within npm "scripts"
@@ -130,11 +128,11 @@ const webpackBaseConfig = function (env) {
       // Will remove duplicate modules that exist due to "Code Splitting" to only include once within the specified bundle "names".
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendor", "manifest"],
-        minChunks: Infinity,
         // minChunks ensures that no other module goes into the vendor chunk
+        minChunks: Infinity,
       }),
 
-      // Generates an HTML5 file for you that includes all your webpack bundles in the body using script tags
+      // Generates an HTML file for you that includes all your webpack bundles in the body using style and script tags
       // NOTE: Add excludeChunks: ["fallback"]
       new HtmlWebpackPlugin({
         template: "./src/templates/_layout.twig",

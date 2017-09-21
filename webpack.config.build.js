@@ -9,7 +9,7 @@ const webpackProductionConfig = {
     filename: "js/[name].[chunkhash].bundle.min.js",
   },
 
-  // Plugins => Configure webpack plugins
+  // Configure webpack plugins
   plugins: [
     new ExtractTextPlugin({
       filename: "css/[name].[contenthash].bundle.min.css",

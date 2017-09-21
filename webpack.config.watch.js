@@ -19,7 +19,7 @@ const webpackDevelopmentConfig = {
   // Enable any "source-map"-like devtool if possible
   devtool: "source-map",
 
-  // Plugins => Configure webpack plugins
+  // Configure webpack plugins
   plugins: [
     new ExtractTextPlugin({
       filename: "css/[name].bundle.css",

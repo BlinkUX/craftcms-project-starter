@@ -18,9 +18,7 @@ new Vue({
   },
   delimiters: ["${", "}"],
   mounted () {
-
   },
   methods: {
-
   },
 })

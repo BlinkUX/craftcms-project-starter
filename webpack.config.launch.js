@@ -5,7 +5,7 @@ const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
 // Set the webpack production configurations
 const webpackLaunchConfig = {
   plugins: [
-    // Generate
+    // Generate favicon
     new FaviconsWebpackPlugin({
       logo: "./src/favicon.png",
       persistentCache: true,
@@ -14,7 +14,7 @@ const webpackLaunchConfig = {
         firefox: false,
       },
     }),
-    // Generator robots.txt
+    // Generate robots.txt
     new RobotstxtPlugin({
       dest: "../",
       policy: [
