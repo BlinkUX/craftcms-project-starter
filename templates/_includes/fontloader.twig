@@ -1,0 +1,17 @@
+{% include "_includes/fontfaceobserver" %}
+
+<script>
+  (function(w) {
+    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) return
+
+    var fontA = new w.FontFaceObserver("ArchivoBlack", {
+      weight: 900,
+      style: "normal",
+    })
+
+    w.Promise.all([fontA.load()]).then(function() {
+      w.document.documentElement.classList.add("fonts-loaded")
+      sessionStorage.fontsLoaded = !0
+    })
+  }(this))
+</script>

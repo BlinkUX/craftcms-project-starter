@@ -35,6 +35,13 @@
 
 		<link rel="home" href="{{ siteUrl }}" />
 
+    <script>
+      if (sessionStorage.fontsLoaded) {
+        var html = document.documentElement
+        html.classList.add("fonts-loaded")
+      }
+    </script>
+
 		{{ head() }}
 
 		{# NOTE: CREATE AND INSERT FAVICON LINKS AND META TAGS - Can use "http://realfavicongenerator.net/" #}
@@ -64,6 +71,8 @@
 			</footer>
 
 		</div>
+
+    {% include '_includes/fontloader' %}
 
 		{# NOTE: Webpack Script Bundles Auto Created By HtmlWebpackPlugin and placed here #}
 
