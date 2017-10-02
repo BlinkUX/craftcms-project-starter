@@ -25,3 +25,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+button {
+  // Overwrite Tachyons default of 1.15
+  line-height: normal;
+}
