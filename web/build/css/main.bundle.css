@@ -7210,7 +7210,7 @@ code, .code {
 
 @font-face {
   font-family: "ArchivoBlack";
-  src: url(/build/fonts/ArchivoBlack-Regular.24a2e64.woff2) format("woff2"), url(/build/fonts/ArchivoBlack-Regular.038b9eb.woff) format("woff");
+  src: url(http://localhost:8080/build/fonts/ArchivoBlack-Regular.24a2e64.woff2) format("woff2"), url(http://localhost:8080/build/fonts/ArchivoBlack-Regular.038b9eb.woff) format("woff");
   font-weight: 900;
   font-style: normal; }
 
@@ -7402,6 +7402,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure, button {
 a {
   color: inherit;
   text-decoration: none; }
+
+button {
+  line-height: normal; }
 
 .sans-serif {
   font-family: "Helvetica Neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }

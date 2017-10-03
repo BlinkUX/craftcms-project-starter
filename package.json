@@ -6,7 +6,7 @@
   "scripts": {
     "ds_store": "find . -name '.DS_Store' -type f -delete",
     "clean": "npm run ds_store && rimraf public/build",
-    "start": "npm run clean && WEBPACK_CONFIG_TYPE='watch' webpack --progress --colors",
+    "start": "npm run clean && WEBPACK_CONFIG_TYPE='watch' webpack-dev-server",
     "build": "npm run clean && WEBPACK_CONFIG_TYPE='build' webpack -p --progress --colors",
     "launch": "npm run clean && WEBPACK_CONFIG_TYPE='launch' webpack -p --progress --colors"
   },
@@ -42,6 +42,7 @@
     "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0",
     "webpack-notifier": "^1.5.0"
   },
