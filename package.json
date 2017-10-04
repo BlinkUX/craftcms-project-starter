@@ -49,6 +49,8 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "axios": "^0.16.2",
+    "intersection-observer": "^0.4.2",
+    "lozad": "^1.0.6",
     "picturefill": "^3.0.2",
     "vue": "^2.4.4"
   }
