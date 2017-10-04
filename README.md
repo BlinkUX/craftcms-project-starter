@@ -1,4 +1,4 @@
-# Craft CMS webpack Boilerplate
+# Craft CMS Project Scaffolding
 
 This project is inspired by MilesHerndon’s [Craft CMS Project Boilerplate](https://github.com/MilesHerndon/craft-webpack-project-boilerplate) and has been adapted to my needs.
 

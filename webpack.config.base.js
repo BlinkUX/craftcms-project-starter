@@ -7,6 +7,7 @@ const path = require("path")
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 // Generates an HTML5 file for you that includes all your webpack bundles in the body using script tags
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -137,6 +138,15 @@ const webpackBaseConfig = function (env) {
         template: "./src/templates/_layout.twig",
         filename: "../../templates/_layout.twig",
       }),
+
+      // copy custom static assets
+      new CopyWebpackPlugin([
+        {
+          from: path.resolve(__dirname, "./static"),
+          to: "static",
+          ignore: [".*"],
+        },
+      ]),
 
       new FriendlyErrorsPlugin(),
     ],
