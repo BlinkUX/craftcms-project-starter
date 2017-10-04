@@ -2,9 +2,53 @@
 
 This project is inspired by MilesHerndon’s [Craft CMS Project Boilerplate](https://github.com/MilesHerndon/craft-webpack-project-boilerplate) and has been adapted to my needs.
 
-## Installation
+## About Craft CMS
 
-Download or clone this repository and run:
+Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
+
+Learn more about Craft at [craftcms.com](https://craftcms.com).
+
+## Install Craft 3 Beta
+
+Assuming you have [Composer](https://getcomposer.org/) installed on your machine, in the project folder run:
+
+``` sh
+$ composer install --ignore-platform-reqs
+```
+
+Detailed installation instructions can be found in the [Craft 3 documentation](https://github.com/craftcms/docs/blob/master/en/installation.md).
+
+## 3. Set up the Database
+
+Next up, you’ll need to create a database for your Craft project. Craft 3 supports both MySQL 5.5+ and PostgreSQL 9.5+.
+
+If you’re given a choice, we recommend the following database settings in most cases:
+
+- **MySQL**
+  - Default Character Set: `utf8`
+  - Default Collation: `utf8_unicode_ci`
+
+- **PostgreSQL**
+  - Character Set: `UTF8`
+
+Once the database is created, you’ll need to configure your `.env` file with with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
+
+> {tip} That `.env` file will be processed via [PHP dotenv], which the `craftcms/craft` project comes with preinstalled. The advantage of using PHP dotenv is that it offers a place to store sensitive information (like database connection settings) in a file that doesn’t get committed to your Git repository.
+
+## 4. Set up the Web Server
+
+Create a new web server to host your Craft project. Its document root should point to the `web/` folder.
+
+If you’re not using MAMP, you will probably need to update your `hosts` file, so your computer knows to route requests to your chosen host name to the local computer.
+
+- **macOS/Linux/Unix:** `/etc/hosts`
+- **Windows:** `\Windows\System32\drivers\etc\hosts`
+
+You can test whether everything is set up correctly by pointing your web browser to `http://HOSTNAME/index.php?p=admin` (substituting `HOSTNAME` with your new web server’s host name). You should get the Craft installation wizard, which will take you through a couple setup screens, and then perform the actual installation.
+
+## Install dependencies
+
+In the project folder run:
 
 ``` sh
 $ yarn
