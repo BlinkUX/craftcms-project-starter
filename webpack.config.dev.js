@@ -1,5 +1,4 @@
 const webpackMerge = require("webpack-merge")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 // Set the webpack development configurations
 const webpackDevelopmentConfig = {
@@ -9,12 +8,31 @@ const webpackDevelopmentConfig = {
     publicPath: "http://localhost:8080/",
   },
 
-  // Configure webpack plugins
-  plugins: [
-    new ExtractTextPlugin({
-      filename: "css/[name].bundle.css",
-    }),
-  ],
+  // Module Rules Systems => Configuration for webpack loaders
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+        options: {
+          loaders: {
+            scss: "vue-style-loader!css-loader!sass-loader", // <style lang="scss">
+          },
+        },
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: "style-loader", // creates style nodes from JS strings
+        }, {
+          loader: "css-loader", // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader", // compiles Sass to CSS
+        }],
+      },
+    ],
+  },
 }
 
 /*

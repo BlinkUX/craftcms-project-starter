@@ -46,7 +46,7 @@ If you’re not using MAMP, you will probably need to update your `hosts` file, 
 
 You can test whether everything is set up correctly by pointing your web browser to `http://HOSTNAME/index.php?p=admin` (substituting `HOSTNAME` with your new web server’s host name). You should get the Craft installation wizard, which will take you through a couple setup screens, and then perform the actual installation.
 
-## Install dependencies
+## Install Dependencies
 
 In the project folder run:
 

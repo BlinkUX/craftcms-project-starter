@@ -5,7 +5,6 @@ const webpack = require("webpack")
 // Use NodeJS helper module to define correct absolute file reference paths
 const path = require("path")
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 
@@ -48,7 +47,7 @@ const webpackBaseConfig = function (env) {
       publicPath: "/build/",
     },
 
-    // Configuration for webpack loaders
+    // Module Rules Systems => Configuration for webpack loaders
     module: {
       rules: [
         {
@@ -67,18 +66,6 @@ const webpackBaseConfig = function (env) {
           test: /\.vue$/,
           loader: "eslint-loader",
           exclude: /node_modules/,
-        },
-        {
-          test: /\.vue$/,
-          loader: "vue-loader",
-          options: {
-            loaders: {
-              scss: ExtractTextPlugin.extract({
-                use: "css-loader!sass-loader",
-                fallback: "vue-style-loader",
-              }),
-            },
-          },
         },
         {
           test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -103,11 +90,6 @@ const webpackBaseConfig = function (env) {
             limit: 10000,
             name: "fonts/[name].[hash:7].[ext]",
           },
-        },
-        {
-          test: /\.scss$/,
-          exclude: /node_modules/,
-          use: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
         },
       ],
     },

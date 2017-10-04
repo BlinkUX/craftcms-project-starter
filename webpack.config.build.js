@@ -16,6 +16,29 @@ const webpackProductionConfig = {
     filename: "js/[name].[chunkhash].bundle.min.js",
   },
 
+  // Module Rules Systems => Configuration for webpack loaders
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+        options: {
+          loaders: {
+            scss: ExtractTextPlugin.extract({
+              use: "css-loader!sass-loader",
+              fallback: "vue-style-loader",
+            }),
+          },
+        },
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
+      },
+    ],
+  },
+
   // Configure webpack plugins
   plugins: [
     new ExtractTextPlugin({

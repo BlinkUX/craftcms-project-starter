@@ -1,6 +1,5 @@
 const path = require("path")
 const webpackMerge = require("webpack-merge")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 // Set the webpack development configurations
 const webpackDevelopmentConfig = {
@@ -8,6 +7,32 @@ const webpackDevelopmentConfig = {
   output: {
     filename: "js/[name].bundle.js",
     publicPath: "http://localhost:8080/",
+  },
+
+  // Module Rules Systems => Configuration for webpack loaders
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+        options: {
+          loaders: {
+            scss: "vue-style-loader!css-loader!sass-loader", // <style lang="scss">
+          },
+        },
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: "style-loader", // creates style nodes from JS strings
+        }, {
+          loader: "css-loader", // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader", // compiles Sass to CSS
+        }],
+      },
+    ],
   },
 
   // Dev server configuration
@@ -18,7 +43,7 @@ const webpackDevelopmentConfig = {
       "Access-Control-Allow-Origin": "*",
     },
     stats: "errors-only",
-    contentBase: path.join(__dirname, "web"), // should point to the public folder
+    contentBase: path.join(__dirname, "public"), // should point to the public folder
   },
 
   // Turn on watch mode. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files.
@@ -31,13 +56,6 @@ const webpackDevelopmentConfig = {
 
   // cheap-module-eval-source-map is faster for development
   devtool: "#cheap-module-eval-source-map",
-
-  // Configure webpack plugins
-  plugins: [
-    new ExtractTextPlugin({
-      filename: "css/[name].bundle.css",
-    }),
-  ],
 }
 
 /*
