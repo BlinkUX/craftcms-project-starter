@@ -1,16 +1,15 @@
 // Require Webpack
 const webpack = require("webpack")
 
-// Node"s built-in path module, which prevents file path issues between operating systems
+// Node's built-in path module, which prevents file path issues between operating systems
 // Use NodeJS helper module to define correct absolute file reference paths
 const path = require("path")
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin")
 
 // Generates an HTML5 file for you that includes all your webpack bundles in the body using script tags
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-
-const WebpackNotifierPlugin = require("webpack-notifier")
 
 // Main webpack configuration
 const webpackBaseConfig = function (env) {
@@ -32,7 +31,7 @@ const webpackBaseConfig = function (env) {
       router: "./src/javascripts/router.js",
 
       // File containing code from third party libraries
-      vendor: ["axios", "lazysizes", "picturefill", "vue"],
+      vendor: ["animejs", "axios", "picturefill", "vue"],
     },
 
     // Newly compiled file configuration
@@ -139,7 +138,7 @@ const webpackBaseConfig = function (env) {
         filename: "../../templates/_layout.twig",
       }),
 
-      new WebpackNotifierPlugin({alwaysNotify: true}),
+      new FriendlyErrorsPlugin(),
     ],
   }
 }

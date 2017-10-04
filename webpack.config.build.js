@@ -4,6 +4,13 @@ const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
 
 // Set the webpack production configurations
 const webpackProductionConfig = {
+  // Use minified version in production environment
+  resolve: {
+    alias: {
+      "vue$": "vue/dist/vue.min.js",
+    },
+  },
+
   // Newly compiled file configuration
   output: {
     filename: "js/[name].[chunkhash].bundle.min.js",

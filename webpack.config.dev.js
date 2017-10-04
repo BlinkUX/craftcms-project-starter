@@ -1,4 +1,3 @@
-const path = require("path")
 const webpackMerge = require("webpack-merge")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
@@ -9,28 +8,6 @@ const webpackDevelopmentConfig = {
     filename: "js/[name].bundle.js",
     publicPath: "http://localhost:8080/",
   },
-
-  // Dev server configuration
-  devServer: {
-    host: "localhost",
-    port: 8080,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-    stats: "errors-only",
-    contentBase: path.join(__dirname, "web"), // should point to the public folder
-  },
-
-  // Turn on watch mode. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files.
-  watch: true,
-
-  // A set of options used to customize watch mode:
-  watchOptions: {
-    aggregateTimeout: 300,
-  },
-
-  // cheap-module-eval-source-map is faster for development
-  devtool: "#cheap-module-eval-source-map",
 
   // Configure webpack plugins
   plugins: [
