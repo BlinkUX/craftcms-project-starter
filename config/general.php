@@ -1,25 +1,25 @@
 <?php
 
 return [
-  '*' => array(
+  '*' => [
     'defaultWeekStartDay' => 1,
     'enableCsrfProtection' => true,
     'omitScriptNameInUrls' => true,
     'preserveImageColorProfiles' => true,
-    'defaultSearchTermOptions' => array(
+    'defaultSearchTermOptions' => [
       // Enables fuzzy search
       'subLeft' => true,
       'subRight' => true,
-    ),
+    ],
     'imageDriver' => 'imagick',
     'generateTransformsBeforePageLoad' => true,
-  ),
+  ],
 
-  'dev' => array(
+  'dev' => [
     'devMode' => true,
-  ),
+  ],
 
-  'frb' => array(
+  'frb' => [
     'cooldownDuration' => 0,
-  ),
+  ],
 ];

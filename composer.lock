@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "671db30a3622d43ad492943a951891b0",
+    "content-hash": "8ff5216a99118a6a274f2a6e1df7cf50",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1561,6 +1561,62 @@
                 "phra"
             ],
             "time": "2015-10-13T18:44:15+00:00"
+        },
+        {
+            "name": "selvinortiz/patrol",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selvinortiz/craft-plugin-patrol.git",
+                "reference": "05358ab298f7afa225d04b28d057ba41d55f926d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selvinortiz/craft-plugin-patrol/zipball/05358ab298f7afa225d04b28d057ba41d55f926d",
+                "reference": "05358ab298f7afa225d04b28d057ba41d55f926d",
+                "shasum": ""
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Patrol",
+                "class": "selvinortiz\\patrol\\Patrol",
+                "handle": "patrol",
+                "version": "3.0.2",
+                "schemaVersion": "3.0.0",
+                "developer": "Selvin Ortiz",
+                "developerUrl": "https://selvinortiz.com",
+                "description": "Maintenance Mode & SSL Routing for Craft 3",
+                "documentationUrl": "https://github.com/selvinortiz/patrol/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/selvinortiz/patrol/CHANGELOG.md",
+                "hasCpSection": false,
+                "hasCpSettings": true,
+                "components": {
+                    "defaultService": "selvinortiz\\patrol\\services\\PatrolService"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "selvinortiz\\patrol\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Selvin Ortiz",
+                    "email": "selvin@selvin.co"
+                }
+            ],
+            "description": "Maintenance Mode & SSL Routing for Craft 3",
+            "keywords": [
+                "Craft",
+                "craftcms",
+                "patrol",
+                "plugin"
+            ],
+            "time": "2017-04-02T06:13:59+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
