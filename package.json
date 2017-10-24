@@ -53,6 +53,7 @@
     "intersection-observer": "^0.4.2",
     "lozad": "^1.0.6",
     "picturefill": "^3.0.2",
+    "susy": "^3.0.1",
     "vue": "^2.4.4"
   }
 }
