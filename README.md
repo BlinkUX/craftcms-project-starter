@@ -1,4 +1,4 @@
-# Craft CMS Project Scaffolding
+# Craft CMS Project Boilerplate
 
 This project is inspired by MilesHerndon’s [Craft CMS Project Boilerplate](https://github.com/MilesHerndon/craft-webpack-project-boilerplate) and has been adapted to my needs.
 
@@ -65,7 +65,7 @@ After running `` $ yarn watch `` or `` $ yarn build ``, your deploy-ready code w
 
 ## Under the Hood
 
-This project scaffolding is pretty opinionated and makes use of the following tools, open source projects, and architecture methodologies:
+This project scaffolding is rather opinionated and makes use of the following tools, open source projects, and architecture methodologies:
 
 * [Craft CMS](https://craftcms.com/) - Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike.
 * [Element API for Craft CMS](https://github.com/craftcms/element-api) - Craft CMS plugin to create a JSON API/Feed for your elements in Craft.
