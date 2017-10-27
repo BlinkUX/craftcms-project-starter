@@ -31,7 +31,7 @@ If you’re given a choice, we recommend the following database settings in most
 - **PostgreSQL**
   - Character Set: `UTF8`
 
-Once the database is created, you’ll need to configure your `.env` file with with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
+Once the database is created, you’ll need to configure your `.env` file with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
 
 > {tip} That `.env` file will be processed via [PHP dotenv], which the `craftcms/craft` project comes with preinstalled. The advantage of using PHP dotenv is that it offers a place to store sensitive information (like database connection settings) in a file that doesn’t get committed to your Git repository.
 
@@ -70,7 +70,7 @@ This project scaffolding is rather opinionated and makes use of the following to
 * [Craft CMS](https://craftcms.com/) - Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike.
 * [Element API for Craft CMS](https://github.com/craftcms/element-api) - Craft CMS plugin to create a JSON API/Feed for your elements in Craft.
 * [Patrol for Craft CMS](https://github.com/selvinortiz/craft.patrol) - Patrol simplifies SSL and maintenance routing for sites built with Craft.
-* [Webpack](https://webpack.js.org/) - A bundler for javascript and friends with [code splitting](https://webpack.js.org/guides/code-splitting/) and [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/) set up.
+* [Webpack](https://webpack.js.org/) - A bundler for JavaScript and friends with [code splitting](https://webpack.js.org/guides/code-splitting/) and [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/) set up.
 * [Sass](http://sass-lang.com/) - CSS extension language
 * [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
 * [ECMAScript 2015 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla) - JavaScript's built-in modules
@@ -82,7 +82,7 @@ This project scaffolding is rather opinionated and makes use of the following to
 * [IntersectionObserver polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill) - This library polyfills the native IntersectionObserver API in unsupporting browsers.
 * [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX.
 * [Standard JS](https://standardjs.com/) - JavaScript Standard Style
-* [PictureFill](https://github.com/scottjehl/picturefill) - A responsive image polyfill for <picture>, srcset, sizes, and more.
+* [PictureFill](https://github.com/scottjehl/picturefill) - A responsive image polyfill for `<picture>`, srcset, sizes, and more.
 
 **Go through the repository to learn how things play together.**
 
