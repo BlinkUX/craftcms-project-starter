@@ -69,7 +69,6 @@ This project scaffolding is rather opinionated and makes use of the following to
 
 * [Craft CMS](https://craftcms.com/) - Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike.
 * [Element API for Craft CMS](https://github.com/craftcms/element-api) - Craft CMS plugin to create a JSON API/Feed for your elements in Craft.
-* [Patrol for Craft CMS](https://github.com/selvinortiz/craft.patrol) - Patrol simplifies SSL and maintenance routing for sites built with Craft.
 * [Webpack](https://webpack.js.org/) - A bundler for JavaScript and friends with [code splitting](https://webpack.js.org/guides/code-splitting/) and [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/) set up.
 * [Sass](http://sass-lang.com/) - CSS extension language
 * [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
