@@ -1,5 +1,8 @@
 {
-  "extends": "standard",
+  "extends": [
+    "standard",
+    "plugin:vue/recommended"
+  ],
   "rules": {
     "quotes": [
       2,
