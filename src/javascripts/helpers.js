@@ -1,50 +1,19 @@
 const helpers = {
-
-  makeVisible(el) {
-    el.classList.remove("invisible")
-    el.classList.add("visible")
-  },
-
-  freezeVp(e) {
-    e.preventDefault()
-  },
-
-  stopBodyScrolling(bool) {
-    if (bool === true) {
-      document.body.addEventListener("touchmove", helpers.freezeVp, false)
-    } else {
-      document.body.removeEventListener("touchmove", helpers.freezeVp, false)
-    }
-  },
-
-  preventDefault(e) {
-    e = e || window.event
-    if (e.preventDefault) {
-      e.preventDefault()
-    }
-    e.returnValue = false
-  },
-
-  preventDefaultForScrollKeys(e) {
-    // left: 37, up: 38, right: 39, down: 40,
-    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    const scrollKeys = { 32:1, 33:1, 34:1, 35:1, 36:1, 37:1, 38:1, 39:1, 40:1 }
-    if (scrollKeys[e.keyCode]) {
-      e.preventDefault()
-      return false
-    }
-  },
-
-  debounce(fn, delay) {
+  debounce (fn, delay) {
     let timer = null
-    return function() {
+    return function () {
       let context = this
       let args = arguments
       clearTimeout(timer)
-      timer = setTimeout(function() {
+      timer = setTimeout(function () {
         fn.apply(context, args)
       }, delay)
     }
+  },
+
+  // https://twitter.com/peterpme/status/949352875687202816
+  isEmpty (obj = {}) {
+    !Object.keys(obj).length > 0
   },
 
   serialize (form) {
@@ -118,7 +87,7 @@ const helpers = {
       }
     }
     return q.join("&")
-  },
+  }
 }
 
 export default helpers
