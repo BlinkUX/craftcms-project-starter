@@ -33,26 +33,21 @@ return [
         'preserveImageColorProfiles' => true,
         'imageDriver' => 'imagick',
         'generateTransformsBeforePageLoad' => true,
+        // Base site URL
+        'siteUrl' => getenv('BASE_URL')
     ],
 
     // Dev environment settings
     'dev' => [
-        // Base site URL
-        'siteUrl' => null,
-
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
     ],
 
     // Staging environment settings
     'staging' => [
-        // Base site URL
-        'siteUrl' => null,
     ],
 
     // Production environment settings
     'production' => [
-        // Base site URL
-        'siteUrl' => null,
     ],
 ];
