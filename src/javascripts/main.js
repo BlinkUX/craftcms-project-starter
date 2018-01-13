@@ -21,3 +21,4 @@ new Vue({
   methods: {
   }
 })
+/* eslint-enable */

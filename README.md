@@ -74,7 +74,7 @@ This project scaffolding is rather opinionated and makes use of the following to
 * [Sass](http://sass-lang.com/) - CSS extension language
 * [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
 * [ECMAScript 2015 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla) - JavaScript's built-in modules
-* [Tachyons](http://tachyons.io/) - Functional css for humans
+* [Tachyons](http://tachyons.io/) - Functional CSS for humans
 * [Susy](http://oddbird.net/susy/) - Web Layout Toolkit
 * [anime.js](http://animejs.com/) - JavaScript Animation Engine
 * [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
