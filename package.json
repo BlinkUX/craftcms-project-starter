@@ -4,10 +4,8 @@
   "description": "Craft CMS webpack Boilerplate npm dependencies",
   "main": "src/javascripts/main.js",
   "scripts": {
-    "ds_store": "find . -name '.DS_Store' -type f -delete",
-    "clean": "npm run ds_store && rimraf web/build",
-    "start": "npm run clean && webpack-dev-server --hot --inline --config webpack.dev.js",
-    "build": "npm run clean && webpack -p --progress --config webpack.prod.js"
+    "start": "webpack --progress --config webpack.dev.js && webpack-dev-server --hot --inline --config webpack.server.js",
+    "build": "webpack -p --progress --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +18,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-1": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.1.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.8.0",
