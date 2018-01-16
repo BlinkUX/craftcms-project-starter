@@ -16,6 +16,7 @@ module.exports = merge(dev, {
   watch: true,
 
   watchOptions: {
-    aggregateTimeout: 300
+    aggregateTimeout: 300,
+    ignored: "/node_modules/"
   }
 })

@@ -4,7 +4,7 @@
   "description": "Craft CMS webpack Boilerplate npm dependencies",
   "main": "src/javascripts/main.js",
   "scripts": {
-    "start": "webpack --progress --config webpack.dev.js && webpack-dev-server --hot --inline --config webpack.server.js",
+    "start": "webpack --config webpack.dev.js && webpack-dev-server --hot --config webpack.server.js",
     "build": "webpack -p --progress --config webpack.prod.js"
   },
   "repository": {
