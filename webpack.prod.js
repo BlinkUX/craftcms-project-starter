@@ -1,4 +1,5 @@
 const merge = require("webpack-merge")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 const common = require("./webpack.common.js")
@@ -37,6 +38,7 @@ module.exports = merge(common, {
   },
 
   plugins: [
+    new CleanWebpackPlugin(["web/build"]),
     new UglifyJSPlugin(),
     new ExtractTextPlugin({
       filename: "css/[name].[contenthash].bundle.min.css"

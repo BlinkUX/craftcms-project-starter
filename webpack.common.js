@@ -1,6 +1,5 @@
 const webpack = require("webpack")
 const path = require("path")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -68,8 +67,6 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(["web/build"]),
-
     // The DefinePlugin allows you to create global constants which
     // can be configured at compile time.
     new webpack.DefinePlugin({
