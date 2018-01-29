@@ -21,7 +21,7 @@
   "minimum-stability": "RC",
   "require": {
     "php": ">=7.0.0",
-    "craftcms/cms": "^3.0.0-RC6",
+    "craftcms/cms": "^3.0.0-RC7.1",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
     "craftcms/element-api": "^2.5.2",
