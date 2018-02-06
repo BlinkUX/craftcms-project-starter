@@ -11,13 +11,13 @@ export default {
   data() {
     return {
       privateState: {
-        imgSrc: img,
+        imgSrc: img
       },
-      sharedState: s.state,
+      sharedState: s.state
     }
   },
   mounted() {},
-  methods: {},
+  methods: {}
 }
 </script>
 

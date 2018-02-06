@@ -19,65 +19,18 @@
   opacity: 1;
 }
 
-.col {
-  float: left;
-  margin-right: gutter();
-
-  &.last {
-    margin-right: 0;
-  }
-}
-
-@for $span from 1 through length(susy-get("columns")) {
-  .col-#{$span} {
-    width: span($span);
-  }
-}
-
 @media screen and (min-width: 30em) {
-  @for $span from 1 through length(susy-get("columns")) {
-    // .className-ns
-
-    .col-#{$span}-ns {
-      width: span($span);
-    }
-  }
+  // .className-ns
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   // .className-m
-
-  @for $span from 1 through length(susy-get("columns")) {
-    .col-#{$span}-m {
-      width: span($span);
-    }
-  }
 }
 
 @media screen and (min-width: 60em) {
   // .className-l
-
-  .bg-transparent-l {
-    background-color: transparent;
-  }
-
-  @for $span from 1 through length(susy-get("columns")) {
-    .col-#{$span}-l {
-      width: span($span);
-    }
-
-    .push-#{$span}-l {
-      margin-left: span($span wide);
-    }
-  }
 }
 
 @media screen and (min-width: 80em) {
   // .className-xl
-
-  @for $span from 1 through length(susy-get("columns")) {
-    .col-#{$span}-xl {
-      width: span($span);
-    }
-  }
 }

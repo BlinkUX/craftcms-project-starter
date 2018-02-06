@@ -1,20 +1,21 @@
 {
   "extends": [
     "standard",
+    "prettier",
     "plugin:vue/recommended"
   ],
-  "rules": {
-    "quotes": [
-      2,
-      "double"
-    ],
-    "semi": [
-      2,
-      "never"
-    ]
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true,
+      "classes": true
+    },
+    "sourceType": "module"
   },
   "plugins": [
     "prettier",
+    "vue",
     "html"
   ]
 }
