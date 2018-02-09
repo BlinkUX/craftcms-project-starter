@@ -13,9 +13,25 @@
     },
     "sourceType": "module"
   },
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "plugins": [
-    "prettier",
     "vue",
-    "html"
-  ]
+    "prettier"
+  ],
+  "rules": {
+    "vue/max-attributes-per-line": [
+      2,
+      {
+        "singleline": 3,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ],
+    "prettier/prettier": "error"
+  }
 }

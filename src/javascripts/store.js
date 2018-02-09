@@ -3,11 +3,11 @@ const store = {
   state: {
     hasModal: false
   },
-  toggleModalAction () {
+  toggleModalAction() {
     if (this.debug) console.log("toggleModalAction triggered")
     this.state.hasModal = !this.state.hasModal
   },
-  setActiveProjectAction (object) {
+  setActiveProjectAction(object) {
     if (this.debug) console.log("setActiveProjectAction triggered with", object)
     this.state.activeProject = object
   }

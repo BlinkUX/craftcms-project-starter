@@ -31,7 +31,9 @@ If you’re given a choice, we recommend the following database settings in most
 - **PostgreSQL**
   - Character Set: `UTF8`
 
-Once the database is created, you’ll need to configure your `.env` file with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
+Once the database is created, add a few basic settings and structures by importing the file `craftcms-project-boilerplate.sql.gz` from the root of this repository.
+
+Lastly, you’ll need to configure your `.env` file with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
 
 > {tip} That `.env` file will be processed via [PHP dotenv], which the `craftcms/craft` project comes with preinstalled. The advantage of using PHP dotenv is that it offers a place to store sensitive information (like database connection settings) in a file that doesn’t get committed to your Git repository.
 
@@ -58,10 +60,10 @@ $ yarn
 
 Use Node.js scripts to run build tools.
 
-* `$ yarn start` - Launches webpack-dev-server and recompiles files whenever they change
+* `$ yarn dev` - Launches webpack-dev-server and recompiles files whenever they change
 * `$ yarn build` - Creates production ready code
 
-After running `` $ yarn start `` or `` $ yarn build ``, your deploy-ready code will be taken from the ``./src/`` directory and placed within the ``./web/build/`` and ``./templates/`` directories respectively.
+After running `` $ yarn dev `` or `` $ yarn build ``, your deploy-ready code will be taken from the ``./src/`` directory and placed within the ``./web/build/`` and ``./templates/`` directories respectively.
 
 ## Under the Hood
 

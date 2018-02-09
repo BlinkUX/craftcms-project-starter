@@ -10,15 +10,13 @@ new Vue({
   el: "#app",
   delimiters: ["${", "}"],
   components: {
-    "logo": Logo
+    Logo
   },
   data: {
     privateState: {},
     sharedState: s.state
   },
-  mounted () {
-  },
-  methods: {
-  }
+  mounted() {},
+  methods: {}
 })
 /* eslint-enable */
