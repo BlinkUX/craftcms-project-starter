@@ -29,6 +29,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
+        options: {
+          // Don’t compile ES modules into CommonJS ones.
+          presets: ["env", { modules: false }]
+        },
         exclude: /node_modules/
       },
       {
