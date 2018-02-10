@@ -1,7 +1,7 @@
 import Vue from "vue"
 import s from "./store"
 import Logo from "./components/Logo"
-import "../stylesheets/style.scss"
+import "./style.css"
 
 console.log("Global.js file has imported")
 

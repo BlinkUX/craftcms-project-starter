@@ -30,6 +30,6 @@ a {
 }
 
 button {
-  // Overwrite Tachyons default of 1.15
+  /* Overwrite Tachyons default of 1.15 */
   line-height: normal;
 }

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import img from "../../assets/logo.png"
+import img from "../assets/logo.png"
 import s from "../store"
 
 export default {
@@ -22,6 +22,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

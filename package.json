@@ -2,10 +2,10 @@
   "name": "craftcms-project-boilerplate",
   "version": "1.0.0",
   "description": "Craft CMS webpack Boilerplate npm dependencies",
-  "main": "src/javascripts/main.js",
+  "main": "src/main.js",
   "scripts": {
     "dev": "webpack --config webpack.dev.js && webpack-dev-server --hot --config webpack.server.js",
-    "build": "webpack -p --progress --config webpack.prod.js"
+    "build": "webpack -p --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -39,10 +39,7 @@
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
     "prettier": "^1.10.2",
-    "rimraf": "^2.6.2",
-    "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
-    "uglifyjs-webpack-plugin": "^1.1.6",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",

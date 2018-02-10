@@ -13,15 +13,14 @@ module.exports = merge(common, {
         test: /\.vue$/,
         loader: "vue-loader",
         options: {
-          loaders: {
-            scss: "vue-style-loader!css-loader!sass-loader"
-          }
+          loaders: {}
+          // other vue-loader options go here
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },

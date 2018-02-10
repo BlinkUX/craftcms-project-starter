@@ -13,9 +13,8 @@ module.exports = {
   },
 
   entry: {
-    app: "./src/javascripts/main.js",
-    router: "./src/javascripts/router.js",
-    vendor: ["animejs", "axios", "picturefill", "vue"]
+    main: "./src/main.js",
+    router: "./src/router.js"
   },
 
   output: {
@@ -59,12 +58,6 @@ module.exports = {
   },
 
   plugins: [
-    // The DefinePlugin allows you to create global constants which
-    // can be configured at compile time.
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-    }),
-
     // Will remove duplicate modules that exist due to "Code Splitting"
     // to only include once within the specified bundle "names".
     new webpack.optimize.CommonsChunkPlugin({

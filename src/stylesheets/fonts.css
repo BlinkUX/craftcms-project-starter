@@ -1,4 +1,5 @@
-// Paths are relative to location of main style.scss file
+/* Paths are relative to location of main style.scss file */
+
 @font-face {
   font-family: "ArchivoBlack";
   src: url("../assets/ArchivoBlack-Regular.woff2") format("woff2"),

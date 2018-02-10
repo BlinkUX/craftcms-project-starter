@@ -20,17 +20,17 @@
 }
 
 @media screen and (min-width: 30em) {
-  // .className-ns
+  /* .className-ns */
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  // .className-m
+  /* .className-m */
 }
 
 @media screen and (min-width: 60em) {
-  // .className-l
+  /* .className-l */
 }
 
 @media screen and (min-width: 80em) {
-  // .className-xl
+  /* .className-xl */
 }
