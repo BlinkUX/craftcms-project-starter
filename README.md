@@ -73,7 +73,6 @@ This project scaffolding is rather opinionated and makes use of the following to
 * [Element API for Craft CMS](https://github.com/craftcms/element-api) - Craft CMS plugin to create a JSON API/Feed for your elements in Craft.
 * [Redactor plugin for Craft](https://github.com/craftcms/redactor) - Edit rich text content in Craft CMS using Redactor by Imperavi.
 * [Webpack](https://webpack.js.org/) - A bundler for JavaScript and friends with [code splitting](https://webpack.js.org/guides/code-splitting/) and [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/) set up.
-* [Sass](http://sass-lang.com/) - CSS extension language
 * [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
 * [ECMAScript 2015 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla) - JavaScript's built-in modules
 * [Tachyons](http://tachyons.io/) - Functional CSS for humans
