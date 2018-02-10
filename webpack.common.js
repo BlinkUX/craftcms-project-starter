@@ -29,10 +29,6 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        options: {
-          // Don’t compile ES modules into CommonJS ones.
-          presets: ["env", { modules: false }]
-        },
         exclude: /node_modules/
       },
       {
@@ -72,8 +68,19 @@ module.exports = {
     // Will remove duplicate modules that exist due to "Code Splitting"
     // to only include once within the specified bundle "names".
     new webpack.optimize.CommonsChunkPlugin({
-      names: ["vendor", "manifest"],
-      // minChunks ensures that no other module goes into the vendor chunk
+      name: "vendor",
+
+      minChunks: module =>
+        module.context && module.context.includes("node_modules")
+    }),
+
+    // This plugin must come after the vendor one (because webpack
+    // includes runtime into the last chunk)
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "runtime",
+
+      // minChunks: Infinity means that no app modules
+      // will be included into this chunk
       minChunks: Infinity
     }),
 
