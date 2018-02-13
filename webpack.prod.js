@@ -44,7 +44,8 @@ module.exports = merge(common, {
     new webpack.optimize.UglifyJsPlugin(),
     new CleanWebpackPlugin(["web/build"]),
     new ExtractTextPlugin({
-      filename: "css/[name].[chunkhash].bundle.min.css"
+      filename: "css/[name].[chunkhash].bundle.min.css",
+      allChunks: true
     })
   ]
 })

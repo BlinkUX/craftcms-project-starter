@@ -7,7 +7,7 @@ switch (pathParams[1]) {
   // Home Page
   case "":
     // Import the module
-    import("./routes/home.js").then(module => {
+    System.import("./routes/home.js").then(module => {
       console.log("import -> Home.js")
     })
 
@@ -15,13 +15,13 @@ switch (pathParams[1]) {
     break
 
   // News Page
-  case "news":
+  case "blog":
     // Import the module
-    import("./routes/news.js").then(module => {
-      console.log("import -> news.js")
+    System.import("./routes/blog.js").then(module => {
+      console.log("import -> blog.js")
     })
 
-    console.log("Import 'News Page' modules")
+    console.log("Import 'Blog Page' modules")
     break
 
   // Fallback Page
