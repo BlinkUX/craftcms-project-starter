@@ -1,4 +1,4 @@
-# Craft CMS Project Boilerplate
+# Craft CMS Project Starter
 
 This project is inspired by MilesHerndon’s [Craft CMS Project Boilerplate](https://github.com/MilesHerndon/craft-webpack-project-boilerplate) and has been adapted to my needs.
 
@@ -31,7 +31,7 @@ If you’re given a choice, we recommend the following database settings in most
 - **PostgreSQL**
   - Character Set: `UTF8`
 
-Once the database is created, add a few basic settings and structures by importing the file `craftcms-project-boilerplate.sql.gz` from the root of this repository.
+Once the database is created, add a few basic settings and structures by importing the file `craftcms-project-starter.sql.gz` from the root of this repository.
 
 Lastly, you’ll need to configure your `.env` file with its connection settings. You can either edit the file manually, or run the `./craft setup` command from the root project directory in your terminal.
 
