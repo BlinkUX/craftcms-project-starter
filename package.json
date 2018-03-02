@@ -4,8 +4,8 @@
   "description": "Craft CMS Project Starter npm dependencies",
   "main": "src/main.js",
   "scripts": {
-    "dev": "webpack --config webpack.dev.js && webpack-dev-server --hot --config webpack.server.js",
-    "build": "webpack -p --config webpack.prod.js"
+    "dev": "webpack --mode development --config webpack.dev.js && webpack-dev-server --mode development --hot --config webpack.server.js",
+    "build": "webpack --mode production --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -33,17 +33,18 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.2.2",
-    "extract-text-webpack-plugin": "^3.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "webpack-contrib/html-webpack-plugin",
     "node-sass": "^4.5.3",
     "prettier": "^1.10.2",
     "style-loader": "^0.20.1",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.1.0",
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {

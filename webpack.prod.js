@@ -1,4 +1,4 @@
-const webpack = require("webpack")
+// const webpack = require("webpack")
 const merge = require("webpack-merge")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
@@ -38,10 +38,10 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": '"production"'
-    }),
-    new webpack.optimize.UglifyJsPlugin(),
+    // new webpack.DefinePlugin({
+    //   "process.env.NODE_ENV": '"production"'
+    // }),
+    // new webpack.optimize.UglifyJsPlugin(),
     new CleanWebpackPlugin(["web/build"]),
     new ExtractTextPlugin({
       filename: "css/[name].[chunkhash].bundle.min.css",

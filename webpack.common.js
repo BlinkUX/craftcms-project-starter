@@ -1,4 +1,3 @@
-const webpack = require("webpack")
 const path = require("path")
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
@@ -58,25 +57,6 @@ module.exports = {
   },
 
   plugins: [
-    // Will remove duplicate modules that exist due to "Code Splitting"
-    // to only include once within the specified bundle "names".
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-
-      minChunks: module =>
-        module.context && module.context.includes("node_modules")
-    }),
-
-    // This plugin must come after the vendor one (because webpack
-    // includes runtime into the last chunk)
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "runtime",
-
-      // minChunks: Infinity means that no app modules
-      // will be included into this chunk
-      minChunks: Infinity
-    }),
-
     // Generates an HTML file for you that includes all your webpack
     // bundles in the body using style and script tags
     new HtmlWebpackPlugin({
