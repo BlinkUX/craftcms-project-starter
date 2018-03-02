@@ -32,19 +32,20 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract(["css-loader"])
+        use: ExtractTextPlugin.extract({
+          loader: "css-loader",
+          options: {
+            minimize: true
+          }
+        })
       }
     ]
   },
 
   plugins: [
-    // new webpack.DefinePlugin({
-    //   "process.env.NODE_ENV": '"production"'
-    // }),
-    // new webpack.optimize.UglifyJsPlugin(),
     new CleanWebpackPlugin(["web/build"]),
     new ExtractTextPlugin({
-      filename: "css/[name].[chunkhash].bundle.min.css",
+      filename: "css/[name].[contenthash].bundle.min.css",
       allChunks: true
     })
   ]
