@@ -1,6 +1,6 @@
 import Vue from "vue"
 import s from "./store"
-import Logo from "./components/Logo"
+import Logo from "./components/Logo.vue"
 import "./style.css"
 
 // Lazy load scripts for components, not routes!

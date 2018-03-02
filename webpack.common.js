@@ -4,13 +4,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-  resolve: {
-    extensions: [".js", ".vue", ".json"],
-    alias: {
-      vue$: "vue/dist/vue.esm.js"
-    }
-  },
-
   output: {
     filename: "js/[name].bundle.js",
     path: path.resolve(__dirname, "./web/build"),
@@ -52,7 +45,7 @@ module.exports = {
   },
 
   plugins: [
-    // Generates an HTML file for you that includes all your webpack
+    // Generates a TWIG file that includes all your webpack
     // bundles in the body using style and script tags
     new HtmlWebpackPlugin({
       template: "./src/templates/_layout.twig",
