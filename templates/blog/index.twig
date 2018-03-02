@@ -16,6 +16,8 @@
 {% block main %}
 	<h1>Blog</h1>
 
+  <div id="cool"></div>
+
 	{% for entry in craft.entries.section('blog').all() %}
 		<article>
 			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>

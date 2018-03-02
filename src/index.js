@@ -3,7 +3,9 @@ import s from "./store"
 import Logo from "./components/Logo"
 import "./style.css"
 
-console.log("Global.js file has imported")
+// Lazy load scripts for components, not routes!
+const coolDiv = document.querySelector("#cool")
+if (coolDiv) import("./components/cool.js")
 
 /* eslint-disable no-new */
 new Vue({

@@ -3,7 +3,6 @@ const common = require("./webpack.common.js")
 
 module.exports = merge(common, {
   output: {
-    filename: "js/[name].bundle.js",
     publicPath: "http://localhost:8080/"
   },
 
@@ -13,8 +12,9 @@ module.exports = merge(common, {
         test: /\.vue$/,
         loader: "vue-loader",
         options: {
-          loaders: {}
-          // other vue-loader options go here
+          loaders: {
+            js: "babel-loader"
+          }
         }
       },
       {

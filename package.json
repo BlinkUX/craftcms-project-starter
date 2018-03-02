@@ -4,7 +4,7 @@
   "description": "Craft CMS Project Starter npm dependencies",
   "main": "src/main.js",
   "scripts": {
-    "dev": "webpack --mode development --config webpack.dev.js && webpack-dev-server --mode development --hot --config webpack.server.js",
+    "start": "webpack --mode development --config webpack.dev.js && webpack-dev-server --mode development --hot --config webpack.server.js",
     "build": "webpack --mode production --config webpack.prod.js"
   },
   "repository": {

@@ -11,11 +11,6 @@ module.exports = {
     }
   },
 
-  entry: {
-    main: "./src/main.js",
-    router: "./src/router.js"
-  },
-
   output: {
     filename: "js/[name].bundle.js",
     path: path.resolve(__dirname, "./web/build"),

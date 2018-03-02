@@ -1,4 +1,3 @@
-// const webpack = require("webpack")
 const merge = require("webpack-merge")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
@@ -23,8 +22,10 @@ module.exports = merge(common, {
         options: {
           loaders: {
             css: ExtractTextPlugin.extract({
-              use: "css-loader",
-              fallback: "vue-style-loader"
+              loader: "css-loader",
+              options: {
+                minimize: true
+              }
             })
           }
         }
