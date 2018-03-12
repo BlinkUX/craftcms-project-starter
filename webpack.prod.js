@@ -4,6 +4,14 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const common = require("./webpack.common.js")
 
 module.exports = merge(common, {
+  // Use the compiler-included build of Vue
+  resolve: {
+    alias: {
+      // Use .min.js in production
+      vue: "vue/dist/vue.min.js"
+    }
+  },
+
   output: {
     filename: "js/[name].[chunkhash].bundle.min.js"
   },

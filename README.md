@@ -76,10 +76,7 @@ This project scaffolding is rather opinionated and makes use of the following to
 * [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
 * [ECMAScript 2015 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla) - JavaScript's built-in modules
 * [Tachyons](http://tachyons.io/) - Functional CSS for humans
-* [anime.js](http://animejs.com/) - JavaScript Animation Engine
 * [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
-* [Lozad.js](https://github.com/ApoorvSaxena/lozad.js) - Highly performant, light and configurable lazy loader in pure JS with no dependencies for images, iframes and more, using IntersectionObserver API.
-* [IntersectionObserver polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill) - This library polyfills the native IntersectionObserver API in unsupporting browsers.
 * [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX.
 * [Standard JS](https://standardjs.com/) - JavaScript Standard Style
 * [PictureFill](https://github.com/scottjehl/picturefill) - A responsive image polyfill for `<picture>`, srcset, sizes, and more.

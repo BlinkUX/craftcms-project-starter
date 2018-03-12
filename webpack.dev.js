@@ -2,6 +2,13 @@ const merge = require("webpack-merge")
 const common = require("./webpack.common.js")
 
 module.exports = merge(common, {
+  // Use the compiler-included build of Vue
+  resolve: {
+    alias: {
+      vue: "vue/dist/vue.js"
+    }
+  },
+
   output: {
     publicPath: "http://localhost:8080/"
   },
